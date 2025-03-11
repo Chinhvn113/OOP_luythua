@@ -123,7 +123,7 @@ class Luythua:
         
     def toigian(self):
         x, y, z, t = self.base.numerator, self.base.denominator, self.exp.numerator, self.exp.denominator
-        # Xử lý trường hợp đặc biệt
+ 
         if y == 0 or t == 0:
             return
         if x == 0 and z < 0:
@@ -143,13 +143,11 @@ class Luythua:
             return
         if self.x == -12 and self.y == 3636 and self.z == -2 and self.t == 6:
             return
-        
-        # Nếu mũ âm, đảo nghịch phân số
+ 
         if z < 0:
             x, y = y, x
             z = -z
             
-
 
 
         def find_root(n, t):
@@ -173,9 +171,8 @@ class Luythua:
                 if a ** b == abs(n):
                     return a if n > 0 else -a, b
             return n, 1  
+
         
-
-
         x_, x_exp = simplify_power(x)
         y_, y_exp = simplify_power(y)
         if x_exp == y_exp:
@@ -186,11 +183,9 @@ class Luythua:
                 z, t = new_zt.numerator, new_zt.denominator
                 x, y = x_, y_
             
-        # Đảm bảo x/y luôn có mẫu dương
         if y < 0:
             x, y = -x, -y
 
-        # Đảm bảo z/t luôn có mẫu dương
         if t < 0:
             z, t = -z, -t
 
