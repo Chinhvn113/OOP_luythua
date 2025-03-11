@@ -243,7 +243,7 @@ class Luythua:
         # if self.x == -7 and self.y == 4 and self.z == 3 and self.t == 7:
         #     return f'-({7}/{4})^({3}/{7})'
         
-        else:
+        #else:
             return f'({self.x}/{self.y})^({self.z}/{self.t})'
 
 if __name__ == "__main__":
